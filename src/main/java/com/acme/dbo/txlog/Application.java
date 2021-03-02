@@ -1,5 +1,8 @@
 package com.acme.dbo.txlog;
 
+import static com.acme.dbo.txlog.Facade.log;
+import static java.lang.Math.PI;
+
 public class Application {
     public static void main(String[] args) {
         //.....
@@ -7,12 +10,29 @@ public class Application {
         //.....
         //.....
         //.....
-        Facade.log(1);
+        while (always()) {
+
+        }
+
+//        Facade var = null;
+        byte message = 1; //factual par
+        log(message);
+        System.out.println(">> " + message);
+
+        log("");
+        System.out.println(PI);
+
+//        new Facade();
         //...
         //...
         //...
         //...
-        Facade.log(1);
         //ClassLoader.
+
+        System.out.println();
+    }
+
+    private static boolean always() {
+        return 1 != 1;
     }
 }
