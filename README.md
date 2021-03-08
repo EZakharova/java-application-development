@@ -6,6 +6,7 @@ _2. Java Application as a White Box: designing, coding, debugging and using._ 51
 # Recordings
 - [25.02](https://us02web.zoom.us/rec/share/KwIg5xS2oBAOO6nJNbXlIT48klL99W_IznBblG2a6b48ECFXfrFgSX4OguHypJOq.MABd8IpRzfNUE8Ov)
 - [02.03](https://us02web.zoom.us/rec/share/ZKt6swYm6CSF-dzZ5adbHWhUMgY8x-bzD4j7SztNGUgKhFFHTdqOISBDg5YgpSeI.1MPWPbM3yamjoSgl)
+- [04.03](https://us02web.zoom.us/rec/share/ubVxpyf-uSVK6Qq75ESw0EpVplDvbcgFHF86tRHzAExQjCW8rZAhq6-D6rkjGIs3.F5O6oIlebFve0RkU)
 
 # Attendee prerequisites
 - [ ] Training «1. Java Application Building» completion
@@ -130,6 +131,8 @@ git clone --branch master --depth 1 https://github.com/ACCOUNT/java-application-
 - [ ] Run tests from IDEA 
 ### DoD
 - [ ] All given specifications runs are green
+- [ ] Code reuse and minimum code duplication
+- [ ] Code style
 
 ## Java syntax for procedure style: primitive types system (2.5)
 ### Variable declaration
