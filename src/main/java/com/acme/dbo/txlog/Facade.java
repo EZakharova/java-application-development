@@ -1,35 +1,33 @@
 package com.acme.dbo.txlog;
 
-import java.sql.DriverManager;
-import java.util.function.Function;
-
-/**
- *
- */
 public class Facade {
     public static final String PRIMITIVE_PREFIX = "primitive: ";
+    public static final String STRING_PREFIX = "string prefix: ";
+    private static final String PRIMITIVE_POSTFIX = "";
+    private static final String STRING_POSTFIX = "";
 
-    public static int counter = 0; //global state -> behavior
-
-    /** Contract:
-     * logs <b>ogogoggo!</b> message
-     * @param message must be positive
-     * @throws Exception
-     * @see
-     * @since 1.0
-     */
-    public static void log(int message) throws IllegalArgumentException {
-        print(message);
+    public static void log(Integer message) {
+        print(decorate(PRIMITIVE_PREFIX, message, PRIMITIVE_POSTFIX));
     }
 
-    /*
-    multi-line
-     */
-    public static void log(byte message) { //formal par
-        print(message);
+    public static void log(byte message) {
+        print(decorate(PRIMITIVE_PREFIX, message, PRIMITIVE_POSTFIX));
     }
 
-    private static void print(int message) {
-        System.out.println(PRIMITIVE_PREFIX + message);
+    public static void log(String message) {
+        print(decorate(STRING_PREFIX, message, STRING_POSTFIX));
+    }
+
+    public static void log(Object message) {
+        print(decorate("", message, ""));
+    }
+
+
+    private static void print(Object message) {
+        System.out.println(message);
+    }
+
+    private static String decorate(String prefix, Object message, String postfix) {
+        return prefix + message + postfix;
     }
 }
