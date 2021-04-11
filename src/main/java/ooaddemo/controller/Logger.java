@@ -1,4 +1,9 @@
-package ooaddemo;
+package ooaddemo.controller;
+
+import ooaddemo.domain.SeverityLevel;
+import ooaddemo.filter.MessageFilter;
+import ooaddemo.domain.message.Message;
+import ooaddemo.printer.MessagePrinter;
 
 /**
  * Code reuse: inheritance | delegation | frameworks (IoC) | Generic programming | HOF
@@ -15,7 +20,7 @@ public class Logger extends ValidatingLogger {
     }
 
     //Algo: OCP
-    public void log(String message, int severity) { //0,1,2
+    public void log(Message message, SeverityLevel severity) { //0,1,2
         this.validate(message, severity);
 
         if (filter.filter(message, severity)) {
